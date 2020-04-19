@@ -25,6 +25,3 @@ func entered(followers):
         else:
             $InfluenceLabel.text = curr_influence as String
     return ret
-
-func _on_City1_converted():
-    pass # Replace with function body.

@@ -20,7 +20,8 @@ func new_convert():
         you_win()
 
 func you_win():
-    print("YOU WIN!!")
+    get_tree().paused = true
+    $Menu.you_win()
 
 func _on_SpawnFollowerTimer_timeout():
     var converted_cities = []
@@ -46,3 +47,6 @@ func _on_Menu_started():
 
 func _on_Menu_unpause():
     get_tree().paused = false
+
+func _on_Menu_restart():
+    get_tree().reload_current_scene()

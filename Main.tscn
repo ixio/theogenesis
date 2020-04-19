@@ -21,6 +21,7 @@ follower_gain_rate = 20
 [node name="SpawnFollowerTimer" type="Timer" parent="."]
 autostart = true
 [connection signal="pause" from="Menu" to="." method="_on_Menu_pause"]
+[connection signal="restart" from="Menu" to="." method="_on_Menu_restart"]
 [connection signal="started" from="Menu" to="." method="_on_Menu_started"]
 [connection signal="unpause" from="Menu" to="." method="_on_Menu_unpause"]
 [connection signal="timeout" from="SpawnFollowerTimer" to="." method="_on_SpawnFollowerTimer_timeout"]

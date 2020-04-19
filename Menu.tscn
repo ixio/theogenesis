@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 
@@ -20,6 +20,12 @@ font_path = "res://assets/fonts/COUTURE-Bold.ttf"
 
 [sub_resource type="DynamicFont" id=6]
 font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/fonts/Sofia-Regular.otf"
+
+[sub_resource type="DynamicFont" id=8]
+font_data = SubResource( 7 )
 
 [node name="Menu" type="CanvasLayer"]
 pause_mode = 2
@@ -126,6 +132,46 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="WinMenu" type="Node" parent="."]
+
+[node name="WinLabel" type="Label" parent="WinMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.0
+margin_top = -164.0
+margin_right = 179.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 8 )
+text = "Congralutations !
+
+Your efforts have paid off, you have succeeded in conquering all the major cities of the kingdom. Your God and your mother, the Holy Prophet, is revered by the whole  kingdom
+
+You have kept your faith alive against all odds and it is now enshrined for all eternity."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="WinMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -46.0
+margin_top = -138.0
+margin_right = 54.0
+margin_bottom = -99.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]
 [connection signal="pressed" from="StartMenu/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HelpMenu/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="WinMenu/RestartButton" to="." method="_on_RestartButton_pressed"]
