@@ -3,8 +3,8 @@ extends Node
 export (PackedScene) var FollowerGroup
 export var ffraction = 0.1
 export var fmin = 5
-export var fdist_min = 100
-export var fdist_max = 300
+export var fdist_min = 50
+export var fdist_max = 200
 
 func _ready():
     randomize()

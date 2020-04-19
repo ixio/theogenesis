@@ -17,7 +17,7 @@ FollowerGroup = ExtResource( 3 )
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 966.659, 660.807 )
+position = Vector2( 1037.89, 617.638 )
 follower_gain_rate = 20
 
 [node name="SpawnFollowerTimer" type="Timer" parent="."]
