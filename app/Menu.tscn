@@ -138,7 +138,7 @@ text = "You character is the simple-circle with your numbers of followers inside
 
 Your objectif is to convert all the cities (the double-circles). Each city has an influence number, you need to transfer more followers than the influence number to convert the city. Transfer is done through contact.
 
-Once a city has been converted it will start to spawn follower groups that you can add to your own followers."
+Once a city has been converted it will start to spawn follower groups that you can add to your own followers. However it will also slowly convert back and you may need to reconvert it."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
