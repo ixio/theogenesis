@@ -4,6 +4,8 @@ signal started
 signal pause
 signal unpause
 signal restart
+signal mute
+signal unmute
 
 func _hide(node_tree):
     for node in node_tree.get_children():
@@ -19,6 +21,7 @@ func you_win():
 func _on_StartButton_pressed():
     _hide($StartMenu)
     $HelpButton.set_disabled(false)
+    $MusicButton.set_disabled(false)
     emit_signal("started")
 
 func _on_HelpButton_pressed():
@@ -33,3 +36,11 @@ func _on_CloseButton_pressed():
 
 func _on_RestartButton_pressed():
     emit_signal("restart")
+
+func _on_MusicButton_pressed():
+    if $MusicButton.text == "Music - Stop":
+        $MusicButton.text = "Music - Start"
+        emit_signal("mute")
+    else:
+        $MusicButton.text = "Music - Stop"
+        emit_signal("unmute")

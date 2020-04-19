@@ -13,6 +13,7 @@ func _ready():
     get_tree().paused = true
         
 func new_convert():
+    $ConvertSound.play()
     var all_converted  = true
     for city in $Map.get_children():
         all_converted = all_converted && city.converted
@@ -21,6 +22,7 @@ func new_convert():
 
 func you_win():
     get_tree().paused = true
+    $Music.stop()
     $Menu.you_win()
 
 func _on_SpawnFollowerTimer_timeout():
@@ -44,9 +46,16 @@ func _on_Menu_pause():
 
 func _on_Menu_started():
     get_tree().paused = false
+    $Music.play()
 
 func _on_Menu_unpause():
     get_tree().paused = false
 
 func _on_Menu_restart():
     get_tree().reload_current_scene()
+
+func _on_Menu_mute():
+    $Music.stop()
+
+func _on_Menu_unmute():
+    $Music.play()
