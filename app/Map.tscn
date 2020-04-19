@@ -5,12 +5,12 @@
 [node name="Map" type="Node2D"]
 
 [node name="Alkaran" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168.902, 134.95 )
+position = Vector2( 256.353, 195.901 )
 influence = 500
 
 [node name="Plodrin" parent="." instance=ExtResource( 1 )]
-position = Vector2( 226.318, 495.846 )
+position = Vector2( 305.819, 583.297 )
 influence = 150
 
 [node name="Raknuj" parent="." instance=ExtResource( 1 )]
-position = Vector2( 814.825, 208.77 )
+position = Vector2( 926.127, 333.322 )
