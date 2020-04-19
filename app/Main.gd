@@ -8,14 +8,14 @@ export var fdist_max = 300
 
 func _ready():
     randomize()
-    for city in $Map.get_children():
+    for city in $Map/Cities.get_children():
         city.connect("converted", self, "new_convert")
     get_tree().paused = true
         
 func new_convert():
     $ConvertSound.play()
     var all_converted  = true
-    for city in $Map.get_children():
+    for city in $Map/Cities.get_children():
         all_converted = all_converted && city.converted
     if all_converted:
         you_win()
@@ -27,7 +27,7 @@ func you_win():
 
 func _on_SpawnFollowerTimer_timeout():
     var converted_cities = []
-    for city in $Map.get_children():
+    for city in $Map/Cities.get_children():
         if city.converted:
             converted_cities += [city]
     if converted_cities.size() > 0:
