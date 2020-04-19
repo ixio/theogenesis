@@ -9,7 +9,7 @@ influence = 500
 
 [node name="City3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 308.34, 460.987 )
-influence = 300
+influence = 150
 
 [node name="City2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 667.185, 167.759 )

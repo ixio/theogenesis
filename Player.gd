@@ -8,6 +8,7 @@ var screen_size
 func _ready():
     $UpgradeTimer.start()
     screen_size = get_viewport_rect().size
+    $FollowersLabel.text = followers as String
 
 func _process(delta):
     var velocity = Vector2()
@@ -30,5 +31,6 @@ func _on_UpgradeTimer_timeout():
     $FollowersLabel.text = followers as String
 
 func _on_Player_body_entered(body):
-    body.entered(followers)
-    followers = 0
+    var mod = body.entered(followers)
+    followers += mod
+    $FollowersLabel.text = followers as String
