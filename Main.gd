@@ -10,6 +10,7 @@ func _ready():
     randomize()
     for city in $Map.get_children():
         city.connect("converted", self, "new_convert")
+    get_tree().paused = true
         
 func new_convert():
     var all_converted  = true
@@ -36,3 +37,12 @@ func _on_SpawnFollowerTimer_timeout():
         pos.y = clamp(pos.y, 0, $Player.screen_size.y)
         new_followers.position = pos
         add_child(new_followers)
+
+func _on_Menu_pause():
+    get_tree().paused = true
+
+func _on_Menu_started():
+    get_tree().paused = false
+
+func _on_Menu_unpause():
+    get_tree().paused = false

@@ -5,11 +5,12 @@
 [node name="Map" type="Node2D"]
 
 [node name="City1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168.902, 134.95 )
 influence = 500
 
 [node name="City3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 308.34, 460.987 )
+position = Vector2( 226.318, 495.846 )
 influence = 150
 
 [node name="City2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 667.185, 167.759 )
+position = Vector2( 814.825, 208.77 )
