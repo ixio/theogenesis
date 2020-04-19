@@ -18,6 +18,9 @@ func _show(node_tree):
 func you_win():
     _show($WinMenu)
 
+func you_lose():
+    _show($LoseMenu)
+
 func _on_StartButton_pressed():
     _hide($StartMenu)
     $HelpButton.set_disabled(false)

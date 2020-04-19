@@ -20,12 +20,16 @@ func _converted():
     emit_signal("converted")
 
 func entered(followers):
+    if converted:
+        return 0
     var ret = -1 * min(curr_influence, followers)
     if not(converted):
         curr_influence -= followers
         if curr_influence < 0:
             curr_influence *= -1
+            curr_influence = min(curr_influence, influence)
             _converted()
+            return -1 * curr_influence
         else:
             $InfluenceLabel.text = curr_influence as String
     return ret

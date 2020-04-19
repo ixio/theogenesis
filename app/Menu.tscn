@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://app/Menu.gd" type="Script" id=1]
 
@@ -26,6 +26,13 @@ font_path = "res://assets/fonts/Sofia-Regular.otf"
 
 [sub_resource type="DynamicFont" id=8]
 font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://assets/fonts/COUTURE-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 12
+font_data = SubResource( 9 )
 
 [node name="Menu" type="CanvasLayer"]
 pause_mode = 2
@@ -182,8 +189,59 @@ text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="LoseMenu" type="Node" parent="."]
+
+[node name="LoseLabel" type="Label" parent="LoseMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.0
+margin_top = -164.0
+margin_right = 179.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 8 )
+text = "You have died of old age (or maybe you got sick after eating a bat). Your followers start losing their faith, their children forget you. 
+
+Your religion has died, you failed to keep it alive."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="LoseMenu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -48.8306
+margin_top = -402.364
+margin_right = 51.1694
+margin_bottom = -363.364
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgeLabel" type="Label" parent="."]
+margin_left = 815.026
+margin_top = 23.3626
+margin_right = 963.026
+margin_bottom = 53.3626
+custom_fonts/font = SubResource( 10 )
+text = "You are 20 years old"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="MusicButton" to="." method="_on_MusicButton_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]
 [connection signal="pressed" from="StartMenu/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HelpMenu/CloseButton" to="." method="_on_CloseButton_pressed"]
 [connection signal="pressed" from="WinMenu/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="LoseMenu/RestartButton" to="." method="_on_RestartButton_pressed"]
