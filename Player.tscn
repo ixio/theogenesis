@@ -32,4 +32,5 @@ __meta__ = {
 }
 
 [node name="UpgradeTimer" type="Timer" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
 [connection signal="timeout" from="UpgradeTimer" to="." method="_on_UpgradeTimer_timeout"]

@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 49.5621
 
-[node name="City" type="Area2D"]
+[node name="City" type="StaticBody2D"]
 position = Vector2( 252.975, 130.849 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -21,12 +21,13 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="InfluenceLabel" type="Label" parent="."]
-margin_left = -39.0
-margin_top = -17.0
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = -29.0
+margin_top = -20.0
+margin_right = 27.0
+margin_bottom = 22.0
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

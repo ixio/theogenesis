@@ -1,7 +1,7 @@
 extends Area2D
 
 export var speed = 400
-var followers = 1
+var followers = 0
 export var follower_gain_rate = 10
 var screen_size
 
@@ -25,7 +25,10 @@ func _process(delta):
     position.x = clamp(position.x, 0, screen_size.x)
     position.y = clamp(position.y, 0, screen_size.y)
 
-
 func _on_UpgradeTimer_timeout():
     followers += follower_gain_rate
     $FollowersLabel.text = followers as String
+
+func _on_Player_body_entered(body):
+    body.entered(followers)
+    followers = 0
