@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://City.tscn" type="PackedScene" id=1]
+
+[node name="Map" type="Node2D"]
+
+[node name="City1" parent="." instance=ExtResource( 1 )]
+influence = 500
+city_name = "City1"
+
+[node name="City3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 308.34, 460.987 )
+influence = 300
+city_name = "City3"
+
+[node name="City2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 667.185, 167.759 )
+city_name = "City2"
