@@ -29,7 +29,7 @@ func entered(followers):
             curr_influence *= -1
             curr_influence = min(curr_influence, influence)
             _converted()
-            return -1 * curr_influence
+            return curr_influence - followers
         else:
             $InfluenceLabel.text = curr_influence as String
     return ret

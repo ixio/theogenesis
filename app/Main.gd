@@ -6,7 +6,7 @@ export var fmin = 5
 export var fdist_min = 50
 export var fdist_max = 200
 export var age = 20
-export var danger_age = 70
+export var danger_age = 75
 
 func _ready():
     randomize()
